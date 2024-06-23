@@ -79,6 +79,8 @@
               <br>
               <a href="https://ieeexplore.ieee.org/abstract/document/9142395/" target="_blank">paper</a> /
               <a href="https://github.com/kalikho/Trust-Management-ITS" target="_blank">code</a>
+              <br />
+              <em> Cited by : </em><span id="trust"></span><span>+</span>
 <!--               <p style="text-align: justify">In the Internet of Vehicles (IoV), vehicles communicate wirelessly with other vehicles, sensors, pedestrians, and roadside units. IoV is aimed at improving road safety, driving comfort, and traffic efficiency. However, IoV is exposed to a range of threats to security and privacy. The presence of dishonest and misbehaving peers in the system is of a major concern, which may put lives in danger. Thus, establishing trust among these probable untrusted vehicles is one of the most significant challenges of such a network. The critical pitfalls of existing and traditional mechanisms are scalability, a single point of failure, maintaining the quality of service, verification, and revocation and dealing with sparsity, consistency, availability, efficiency, robustness, privacy concerns are some of the biggest challenges to be addressed. </p> -->
             </td> 
           </tr> 
@@ -109,7 +111,8 @@
               <a href="https://sites.google.com/site/kallanshuman/" target="_blank">Anshuman Kalla</a>,
               <br>
               <em>Journal of Network and Computer Applications, Elsevier</em>, 2021  
-              <br>
+              <br />
+              <em> Cited by : </em><span id="jnca"></span><span>+</span>
 <!--               <p style="text-align: justify">Robotics is the multi-disciplinary domain that is booming in today’s world, and expanding its roots deep into various fields of research, manufacturing industries, healthcare, and even in our day-to-day lives. Nevertheless, as with any other evolving technology, robotics face numerous challenges. In this context, lately, blockchain technology has been identified as a promising technology to resolve many of these issues such as identification of malicious/rogue nodes, malfunctioning/faults in automated processes, non-compliance to the agreed norms and privacy rules, security attacks on robotic systems, and non-transparency in performance monitoring and audits. In particular, blockchain with its features like decentrality, immutability, provenance, low operational cost, tight access control, and trustworthy operations, can offer significant improvements to new applications and use cases driven by robotics.</p> -->
             </td>
           </tr>     
@@ -142,8 +145,11 @@
               Sunit K Nandi,
               <a href="https://people.eecs.berkeley.edu/~sfk/" target="_blank">Sukumar Nandi</a>
               <br>
+              <em>I4CS, Wolfsburg, Germany</em>, 2019  <br />
+              <em>Awarded 2nd Best Paper</em>  <br />
               <a href="https://link.springer.com/chapter/10.1007/978-3-030-22482-0_16" target="_blank">paper</a>
-              <p></p>
+              <br />
+              <em> Cited by : </em><span id="home"></span><span>+</span>             
 <!--               <p style="text-align: justify">With the advance in technology and growth in standard of living, smart homes have become a reality. Smart homes consist of home appliances and devices that communicate with each other to address the needs of the residents. These appliances generate, share and consume lots of data which are private and sometimes safety critical to the residents. Managing them is a challenging task. The current frameworks for managing home appliances are centralized in nature. Such frameworks force smart home residents to trust the service providers or a third party. These frameworks are also prone to hacking, compromise of data and a single point of failure. Availability of services can also never be guaranteed with such frameworks. Technologies such as blockchain and smart contracts can help to manage these appliances. In this paper, we study the scope of blockchain technology in smart homes.</p> -->
             </td>
           </tr> 
@@ -174,9 +180,11 @@
               Mridutpal Lahon,
               <a href="https://iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a>
               <br>
-              <em>IEEE TENCON</em>, 2019  
+              <em>IEEE TENCON, Kerala, India</em>, 2019  
               <br>
               <a href="https://ieeexplore.ieee.org/abstract/document/8929322" target="_blank">paper</a>
+              <br />
+              <em> Cited by : </em><span id="tencon"></span><span>+</span>
 <!--               <p style="text-align: justify">With the increasing number of vehicles on the road, the insurance market for vehicular insurance is also increasing. There has been a massive proliferation in the number of policy taken by the drivers over the year. The traditional vehicular insurance processes used by the insurance companies rely on analyzing the history of the behaviors of the drivers for deciding the suitable premium amount to be paid by the vehicles. Usage-Based Insurance (UBI), which is based on telematics, turns out to be a modern and effective approach for providing insurance to the vehicles. Unlike the traditional approach, the premiums in the UBI are calculated based on the current behavior of the drivers. Moreover, there exists a lack of transparency in the processing of the claims, which not only results in delays of receiving the claims but also leads to a number of frauds. Decentralized technology such as blockchain turns out to be an effective solution for the problems mentioned above. In this work, we propose a blockchain-based framework for vehicular UBI and incentives in ITS. We demonstrate and analyze the feasibility of our work with proper experimental testbed setup.</p> -->
             </td>
           </tr> 
@@ -187,10 +195,28 @@
  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr>
     <td style="padding:20px;padding-top:0px;width:100%;vertical-align:middle">
-        <p align="center"><iframe width="550" height="315"
-        src="https://www.youtube.com/embed/7nPKIlEGqV4">
+        <p align="center"><iframe width="550" height="315" src="https://www.youtube.com/embed/7nPKIlEGqV4">
           </iframe></p>
     </td>
   </tr>
-</tbody></table></body>
+</tbody></table>
+<script>
+  function get_citation_count(url,id){
+                  fetch(url).then(response => {
+                      if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                   }
+                     return response.json();
+                  })
+                  .then(data => {
+                    document.getElementById(id).innerHTML = Object.keys(data).length;
+                  })
+                  .catch(error => console.error('Fetch error:', error));
+                }
+                get_citation_count("https://opencitations.net/index/coci/api/v1/citations/10.1109/tits.2020.3004041","trust")
+                get_citation_count("https://opencitations.net/index/coci/api/v1/citations/10.1016/j.jnca.2021.103245 ","jnca")
+                get_citation_count("https://opencitations.net/index/coci/api/v1/citations/10.1007/978-3-030-22482-0_16 ","home")
+                get_citation_count("https://opencitations.net/index/coci/api/v1/citations/10.1109/tencon.2019.8929322 ","tencon")
+</script>
+</body>
 </html>
